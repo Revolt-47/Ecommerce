@@ -5,6 +5,7 @@ import PrimarySearchAppBar from "./Screens/AppBar";
 import Cart from "./Screens/Cart";
 import Home from "./Screens/Home";
 import { LoginComponent } from "./Screens/Login";
+import Payment from "./Screens/Payment";
 
 
 
@@ -68,6 +69,7 @@ function App() {
           <Route path="/login" element={<LoginComponent  setuser={setuser}/>} />
           <Route path="/" element={<Home  user={user} setuser={setuser} AddToCart={AddToCart}/>} />
           <Route path="/cart" element={<Cart  Carts={Carts}/>} />
+          <Route path="/payment" element={<Payment  Carts={Carts}/>} />
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </BrowserRouter>

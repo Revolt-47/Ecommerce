@@ -1,7 +1,10 @@
 import { Box, Button, Card, CardContent, Typography } from '@mui/material'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function CartTotal({Carts}) {
+
+  const nav = useNavigate();
   return (
     <>
     <Card sx={{ display: 'flex' , justifyContent:"space-between" }}>
@@ -23,7 +26,7 @@ export default function CartTotal({Carts}) {
       </Box>
   </Card>
 
-  <Button variant="contained" style={{marginTop:"50px"}}>Checkout</Button>
+  <Button variant="contained" style={{marginTop:"50px"}} onClick={()=>{nav("/payment")}}>Checkout</Button>
   </>
   )
 }

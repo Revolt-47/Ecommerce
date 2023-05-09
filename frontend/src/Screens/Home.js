@@ -15,7 +15,7 @@ export default function Home({setuser , user , AddToCart}) {
             navigate("/login")
         }else{
             // Api Call to fetch data 
-            fetch("http://localhost:3000/api/item/getAllItems", {
+            fetch("http://localhost:3001/api/item/getAllItems", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

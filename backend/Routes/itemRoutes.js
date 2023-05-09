@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-let { addItem, getAllItems, getItemById } = require("../controllers/itemController");
+let { addItem, getAllItems, getItemById } = require("../Controllers/itemController");
 const { VerifyToken, VerifyAdmin } = require("../utils/Authenticate");
 
 router.post("/addItem", VerifyToken , VerifyAdmin, addItem);
